@@ -17,7 +17,7 @@ title: Bootstrap Playground.
 name: Bootstrap playground.
 description: > # this means to ignore newlines until "baseurl:"
   Bootstrap playground site
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/bootstrap-playground" # the subpath of your site, e.g. /blog
 #url: "http://www.sabanero.co" # the base hostname & protocol for your site, e.g. http://example.com
 
 social:
