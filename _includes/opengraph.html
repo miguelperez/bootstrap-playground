@@ -1,0 +1,60 @@
+{% if page.title %}
+  {% if page.layout == "post" %}
+    <title>{{ page.title }}</title>
+  {% else %}
+    <title>{{ page.title }}</title>
+  {% endif %}
+{% else %}
+  <title>{{ site.name }}</title>
+{% endif %}
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+
+{% if page.title %}
+  {% if page.layout == "post" %}
+    <meta content="{{ page.title }}" property="og:title">
+  {% else %}
+    <meta content="{{ page.title }}" property="og:title">
+  {% endif %}
+{% else %}
+  <meta content="{{ site.name }}" property="og:title">
+{% endif %}
+
+{% if page.description %}
+  <meta property="og:description" content="{{ page.description | normalize_whitespace | escape  }}">
+{% else %}
+  <meta property="og:description" content="{{ site.description | normalize_whitespace | escape }}">
+{% endif %}
+
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+<meta property="og:site_name" content="Bootstrap Playground">
+<!-- <meta property="og:image" content="{{ site.url }}/assets/img/card.png"> -->
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+{% if page.description %}
+  <meta name="twitter:description" content="{{ page.description | normalize_whitespace | escape  }}">
+{% else %}
+  <meta name="twitter:description" content="{{ page.description | normalize_whitespace | escape  }}">
+{% endif %}
+
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
+
+{% if page.layout == "post" %}
+  <meta content="{{ page.title }}" name="twitter:title">
+{% else %}
+  <meta content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}" name="twitter:title">
+{% endif %}
+
+<meta name="twitter:site" content="@chopi">
+<meta name="twitter:creator" content="@chopi">
+<!-- <meta property="twitter:image" content="{{ site.url }}/assets/img/card.png"> -->
+
+{% if page.description %}
+  <meta itemprop="description" content="{{ page.description | normalize_whitespace | escape  }}">
+{% else %}
+  <meta itemprop="description" content="{{ page.description | normalize_whitespace | escape  }}">
+{% endif %}

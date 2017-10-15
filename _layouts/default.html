@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    {% include head.html %}
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/bootstrap.min.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    
+  </head>
+
+  <body>
+
+    {{ content }}
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="{{ "/assets/main.js" | relative_url }}" ></script>    
+
+  </body>
+
+</html>
