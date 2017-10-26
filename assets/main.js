@@ -1,5 +1,11 @@
 $(document).ready(function(){
-  $('.js-editor').on('keyup', function(evt){
-    $('.js-html-result').html($(this).val());
+
+  var editor = ace.edit("codeEditor");
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/html");
+
+  editor.getSession().on('change', function(e) {
+    $('.js-html-result').html( editor.getValue() );
   });
+
 });

@@ -3,3 +3,8 @@
 
 $baseurl:          "{{ site.url }}";
 @import "main-site";
+
+#codeEditor {
+  /** Setting height is also important, otherwise editor wont showup**/
+  height: 300px;
+}

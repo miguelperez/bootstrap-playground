@@ -213,8 +213,7 @@ DEPENDENCIES
   jekyll-bootstrap-sass
   jekyll-feed (~> 0.6)
   jekyll-livereload
-  minima (~> 2.0)
   tzinfo-data
 
 BUNDLED WITH
-   1.15.1
+   1.15.4
